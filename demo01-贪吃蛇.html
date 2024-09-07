@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>贪吃蛇</title>
+  <style>
+    .container {
+      position: relative;
+      width: fit-content;
+      margin: 100px auto;
+    }
+
+    .game-over {
+      width: 300px;
+      height: 100px;
+      line-height: 100px;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 700;
+      background-color: rgba(0, 0, 0, 0.3);
+      color: #FFF;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: auto;
+      z-index: 999;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <div>
+    <button class="start">开始</button>
+    <button class="pause">暂停</button>
+    <button class="save">保存游戏进度</button>
+    <button class="load">加载游戏进度</button>
+  </div>
+  <div>
+    <span>积分:</span>
+    <span class="score">0</span>
+  </div>
+  <!-- 放置游戏地图的容器 -->
+  <div class="container">
+    <div class="game-over">游戏结束</div>
+  </div>
+
+  <script src="./js/tools.js"></script>
+  <script src="./game/Map.js"></script>
+  <script src="./game/Food.js"></script>
+  <script src="./game/Snake.js"></script>
+  <script src="./game/Game.js"></script>
+
+  <script>
+    const game = new Game('.container')
+  </script>
+</body>
+</html>
